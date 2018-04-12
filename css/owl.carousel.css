@@ -75,17 +75,21 @@
     top: 15px;
     right: -142px;
   }
-  .owl-carousel .owl-nav button.owl-prev:hover {
+  .owl-carousel .owl-nav button.owl-prev:hover,
+  .owl-carousel .owl-nav button.owl-prev:focus {
     background: url("../img/scroll-hov.svg") no-repeat;
   }
-  .owl-carousel .owl-nav button.owl-next:hover {
+  .owl-carousel .owl-nav button.owl-next:hover,
+  .owl-carousel .owl-nav button.owl-next:focus {
     background: url("../img/scroll-hov.svg") no-repeat;
   }
   .owl-carousel .owl-nav button.owl-prev:active {
     background: url("../img/scroll-act.svg") no-repeat;
+    outline: none;
   }
   .owl-carousel .owl-nav button.owl-next:active {
     background: url("../img/scroll-act.svg") no-repeat;
+    outline: none;
   }
   .owl-carousel .owl-nav button.owl-prev,
   .owl-carousel .owl-nav button.owl-next {

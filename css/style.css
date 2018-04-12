@@ -53,6 +53,7 @@ main {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  margin-right: 220px;
 }
 
 .site-navigation a {
@@ -168,7 +169,7 @@ main {
   padding: 10px 20px;
 }
 
-.button a {
+a.button {
   text-decoration: none;
   color: #ffffff;
 }
@@ -177,6 +178,10 @@ main {
 .intro .button:focus {
   background-color: #2b9b2b;
   cursor: pointer;
+}
+
+.intro .button:active {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 p.scroll {
@@ -190,6 +195,15 @@ p.scroll {
   padding: 2px 13px;
   margin: 0;
   margin-top: 183px;
+}
+
+p.scroll:hover,
+p.scroll:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+p.scroll:active {
+  color: #3e3e3e;
 }
 
 .scroll a {
@@ -925,7 +939,8 @@ border-radius: 0 50px 50px 0;
   margin: 1px auto 0;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.contact-form button:focus {
   background-color: #278b27;
 }
 
