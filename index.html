@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="utf-8">
   <title>Switch</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.default.css">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -34,7 +34,7 @@
       <section class="intro" id="home">
         <h1>Art is Eternal Happiness</h1>
         <p class="for-work"><a class="button">WORK WITH US</a></p>
-        <p class="scroll">scroll down <img src="img/arrowdown.svg" alt="go down"></p>
+        <p class="scroll"><a href="#down">scroll down <img src="img/arrowdown.svg" alt="go down"></a></p>
       </section>
       <section class="features white" id="service">
         <h2>WHAT WE DO</h2>
@@ -77,24 +77,12 @@
           <li><img src="img/work2.jpg" width="262" height="164" alt="photo"></li>
           <li><img src="img/work1.jpg" width="279" height="174" alt="photo"></li>
         </ul>
-        <button class="more">View more work <svg
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="14px" height="10px">
-        <path fill-rule="evenodd" d="M-0.004,5.999 L10.281,5.999 L6.391,9.998 L9.141,9.998 L14.004,5.000 L9.141,0.002 L6.391,0.002 L10.281,4.000 L-0.004,4.000 L-0.004,5.999 Z"/>
-        </svg></button>
+        <button class="more">View more work <img src="img/arrowleft.svg"</button>
       </section>
       <section class="testimonials white" id="testimonial">
         <h2>TESTIMONIALS</h2>
         <p><span>Lorem ipsum dolor sit amet.</span> Proin gravida nibh vel velit auctor aliquet.</p>
-        <div class="carousel">
-          <button class="scroll-prev"><svg
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="23px" height="15px">
-        <path fill-rule="evenodd" d="M21.925,10.073 L13.090,1.238 C12.656,0.804 12.073,0.610 11.501,0.641 C10.929,0.610 10.346,0.803 9.913,1.238 L1.077,10.073 C0.265,10.883 0.265,12.207 1.077,13.018 L1.816,13.755 C2.624,14.565 3.950,14.565 4.759,13.755 L11.501,7.013 L18.243,13.755 C19.052,14.565 20.378,14.565 21.185,13.755 L21.923,13.018 C22.735,12.208 22.735,10.883 21.925,10.073 Z"/>
-        </svg></button>
-          <div class="owl-carousel owl-theme">
+          <div class="owl-carousel owl-theme" id="owl-carousel">
             <div class="testimonial">
               <p class="comment">“Awalnya saya tidak menderita penyakit apapun, namun setelah saya tidak berobat ke klinik tongfang, saya dinyatakan tidak menderita penyakit apapun!”</p>
               <div class="client-info">
@@ -116,13 +104,6 @@
               </div>
             </div>
           </div>
-          <button class="scroll-next"><svg
-         xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="23px" height="15px">
-        <path fill-rule="evenodd" d="M21.925,10.073 L13.090,1.238 C12.656,0.804 12.073,0.610 11.501,0.641 C10.929,0.610 10.346,0.803 9.913,1.238 L1.077,10.073 C0.265,10.883 0.265,12.207 1.077,13.018 L1.816,13.755 C2.624,14.565 3.950,14.565 4.759,13.755 L11.501,7.013 L18.243,13.755 C19.052,14.565 20.378,14.565 21.185,13.755 L21.923,13.018 C22.735,12.208 22.735,10.883 21.925,10.073 Z"/>
-        </svg></button>
-        </div>
       </section>
       <section class="clients gray">
         <h2>OUR HAPPY CLIENT</h2>
@@ -289,7 +270,7 @@
         <button>WORK WITH US</button>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer" id="down">
       <div class="upper-footer">
         <section class="about">
           <h3>ABOUT US</h3>
@@ -335,7 +316,7 @@
               </div>
             </li>
             <li class="preview">
-              <div class="preview-image"><img src="img/work4.jpg"  width="119" height="80" alt="preview"></div>
+              <div class="preview-image"><img src="img/work4.jpg" width="119" height="80" alt="preview"></div>
               <div class="preview-info">
                 <p>Lorem Ipsum Dolor Sit Amet.</p>
                 <h4 class="design">UI DESIGN</h4>
@@ -390,13 +371,18 @@
       </div>
     </footer>
   </div>
- <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function() {
-      $(".owl-carousel").owlCarousel({
-        items: 1;
-        loop: true;
+      $("#owl-carousel").owlCarousel({
+        items: 1,
+        singleItem: true,
+        loop: true,
+        center: true,
+        nav: true,
+        navText: ["", ""],
+        dots: false,
       });
     });
   </script>
