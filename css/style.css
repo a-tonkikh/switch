@@ -91,7 +91,7 @@ main {
 
 .main-navigation form {
   padding: 0;
-  margin: 3px 0;
+  margin: 2px 0;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -102,18 +102,20 @@ main {
 }
 
 .search input {
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: baseline;
   border-radius: 50px 0 0 50px;
   padding: 1px 0;
-  padding-left: 10px;
+  padding-left: 15px;
   border: none;
   background-color: rgba(254, 254, 254, 0.8);
   color: #000000;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 13px;
+  line-height: 14px;
   margin: 0;
   overflow: auto;
+  width: 153px;
 }
 
 .search button {
@@ -121,7 +123,7 @@ main {
   border: none;
   background-color: rgba(254, 254, 254, 0.8);
   margin: 0;
-  padding: 7.2px;
+  padding: 5px;
 }
 
 .search button:hover {
@@ -759,12 +761,12 @@ border-radius: 0 50px 50px 0;
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 12px 25px;
+  padding: 12px 25px 8px;
 }
 
-.upper-footer div {
+.upper-footer section {
   min-width: 310px;
-  max-width: 30%;
+  max-width: 28%;
   padding: 0;
   margin: 0 10px;
 }
@@ -805,7 +807,7 @@ border-radius: 0 50px 50px 0;
 
 .posts .preview-list {
   padding: 0;
-  margin: 0;
+  margin: 18px auto;
 }
 
 .preview-list .preview {
@@ -814,10 +816,11 @@ border-radius: 0 50px 50px 0;
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto 12px;
+  text-align: left;
 }
 
-.preview p {
+.preview div {
   padding: 0;
   margin: 0;
 }
@@ -827,22 +830,56 @@ border-radius: 0 50px 50px 0;
   margin: 0;
 }
 
-.preview div.preview-image {
-  display: block;
+.preview .preview-image {
   box-sizing: border-box;
-  width: 53px;
+  max-width: 53px;
   height: 53px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 9px;
 }
 
 .preview-image img {
   display: inline-block;
-  width: 100%;
-  height: auto;
+  float: left;
+}
+
+.preview-info {
+  min-width: 230px;
+}
+
+.preview-info p {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.preview-info h4 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 0 5px;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+.preview-info .magazine {
+  background-color: #54d154;
+}
+
+.preview-info .design {
+  background-color: #ffba00;
+}
+
+.preview-info .book {
+  background-color: #f34d04;
+}
+
+.preview-info .photography {
+  background-color: #089dea;
 }
 
 .upper-footer .contacts {
@@ -853,4 +890,106 @@ border-radius: 0 50px 50px 0;
 .contacts p {
   padding: 0;
   margin: 0 auto;
+  font-size: 14px;
+  line-height: 16px;
+  color: #cccccc;
+  font-weight: lighter;
+}
+
+.contacts .contact-form {
+  margin: 26px auto;
+  padding: 0;
+}
+
+.contact-form input {
+  width: 300px;
+  margin: 1px auto;
+  padding: 7px 10px;
+  background-color: #444444;
+  border: none;
+  color: #cccccc;
+}
+
+.contact-form input:first-child {
+  border-radius: 3px 3px 0 0;
+}
+
+.contact-form textarea {
+  vertical-align:top;
+  min-height: 119px;
+  width: 300px;
+  margin: 1px auto;
+  padding: 7px 10px;
+  background-color: #444444;
+  border: none;
+  color: #cccccc;
+  resize: none;
+  overflow: auto;
+  scrollbar-3dlight-color: #444444;
+  scrollbar-arrow-color: #333333;
+  scrollbar-base-color: #444444;
+  scrollbar-darkshadow-color: #444444;
+  scrollbar-face-color:#333333;
+  scrollbar-track-color: #444444;
+  scrollbar-shadow-color: #444444;
+  scrollbar-highlight-color: #444444;
+}
+
+.contact-form button {
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #2b9b2b;
+  border: none;
+  border-radius: 0 0 3px 3px;
+  color: #ffffff;
+  width: 319px;
+  padding: 7px 0;
+  margin: 1px auto 0;
+}
+
+.contact-form button:hover {
+  background-color: #278b27;
+}
+
+.tv {
+  background-color: #222222;
+  margin: 0;
+  padding: 22px 85px;
+  text-align: center;
+}
+
+.tv h3 {
+  color: #111111;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.tv h3::after {
+  content: "";
+  display: block;
+  background-color: #111111;
+  width: 30px;
+  height: 1px;
+  text-align: center;
+  padding: 0;
+  margin: 3px auto;
+}
+
+.channels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 25px auto 3px;
+}
+
+.channels li {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
 }
